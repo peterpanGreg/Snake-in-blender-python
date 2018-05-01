@@ -34,12 +34,12 @@ def Main():
     snake.avancer_bout()            #avancer le bout du Serpent
     
 
-    print(snake)
-    print(aple)
+    print(snake.tete)
     print(direct)
     
 
     #rendu
+    Rendu(snake,aple)
     
     if snake.perdre()==True:          #PERDU!!!!!!!!!
         print("PERDU!!!!!!")
