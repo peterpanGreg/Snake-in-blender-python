@@ -34,5 +34,5 @@ class Direct:
         DOWN_key=False
         RIGHT_key=False
         LEFT_key=False
-        
+
     
