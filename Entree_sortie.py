@@ -34,5 +34,26 @@ class Direct:
         DOWN_key=False
         RIGHT_key=False
         LEFT_key=False
-
+        
+def Rendu(snake,aple):
+    cont=logic.getCurrentController()
+    own=cont.owner
+    scene=own.scene
     
+
+    own_tete=scene.objects["Empt_tete"]
+    tete=snake.tete
+    own_tete.position.x=tete[0]
+    own_tete.position.y=-tete[1]
+    
+    own_aple=scene.objects["Empt_aple"]
+    own_aple.position.x=aple.cord[0]
+    own_aple.position.y=-aple.cord[1]
+    
+    print(scene.objects)
+    
+    if ("Tête" in scene.objects)==False:
+        cont.activate(cont.actuators["Rendu_tete"]) 
+    if ("Aple" in scene.objects)==False:
+        cont.activate(cont.actuators["Rendu_aple"])
+        
